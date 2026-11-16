@@ -1,0 +1,32 @@
+[
+  {
+    "id": "D01",
+    "nombre": "Lucía Montes",
+    "especialidad": "Programación Estructurada"
+  },
+  {
+    "id": "D02",
+    "nombre": "Gabriel Rivas",
+    "especialidad": "Matemática I"
+  },
+  {
+    "id": "D03",
+    "nombre": "Elena Solís",
+    "especialidad": "Física General"
+  },
+  {
+    "id": "D04",
+    "nombre": "Mateo Duarte",
+    "especialidad": "Álgebra Lineal"
+  },
+  {
+    "id": "D05",
+    "nombre": "Valeria Paz",
+    "especialidad": "Comunicación"
+  },
+  {
+    "id": "D06",
+    "nombre": "Daniel Lagos",
+    "especialidad": "Estadística"
+  }
+]

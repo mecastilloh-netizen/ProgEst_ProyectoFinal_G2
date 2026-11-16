@@ -1,0 +1,35 @@
+[
+  {
+    "id": "R-DEMO-0",
+    "aula": "A101",
+    "docente": "D01",
+    "fecha": "2026-11-06",
+    "inicio": "16:00",
+    "fin": "17:30",
+    "motivo": "Tutoría de programación",
+    "asistentes": 20,
+    "estado": "activa"
+  },
+  {
+    "id": "R-DEMO-1",
+    "aula": "A102",
+    "docente": "D02",
+    "fecha": "2026-11-07",
+    "inicio": "16:00",
+    "fin": "17:30",
+    "motivo": "Sesión de estudio",
+    "asistentes": 20,
+    "estado": "activa"
+  },
+  {
+    "id": "R-DEMO-2",
+    "aula": "A103",
+    "docente": "D03",
+    "fecha": "2026-11-08",
+    "inicio": "16:00",
+    "fin": "17:30",
+    "motivo": "Taller de proyectos",
+    "asistentes": 20,
+    "estado": "activa"
+  }
+]

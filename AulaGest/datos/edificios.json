@@ -1,0 +1,18 @@
+[
+  {
+    "id": "A",
+    "nombre": "Ciencias y Tecnología",
+    "descripcion": "Aulas teóricas y laboratorios de informática.",
+    "conexiones": [
+      "B"
+    ]
+  },
+  {
+    "id": "B",
+    "nombre": "Humanidades e Innovación",
+    "descripcion": "Espacios para aprender, colaborar y crear.",
+    "conexiones": [
+      "A"
+    ]
+  }
+]

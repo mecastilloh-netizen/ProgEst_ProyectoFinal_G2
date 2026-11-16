@@ -1,0 +1,42 @@
+[
+  {
+    "id": "AS01",
+    "nombre": "Programación Estructurada",
+    "creditos": 4
+  },
+  {
+    "id": "AS02",
+    "nombre": "Matemática I",
+    "creditos": 4
+  },
+  {
+    "id": "AS03",
+    "nombre": "Física General",
+    "creditos": 4
+  },
+  {
+    "id": "AS04",
+    "nombre": "Álgebra Lineal",
+    "creditos": 4
+  },
+  {
+    "id": "AS05",
+    "nombre": "Comunicación",
+    "creditos": 3
+  },
+  {
+    "id": "AS06",
+    "nombre": "Estadística",
+    "creditos": 3
+  },
+  {
+    "id": "AS07",
+    "nombre": "Introducción a Sistemas",
+    "creditos": 3
+  },
+  {
+    "id": "AS08",
+    "nombre": "Ética Profesional",
+    "creditos": 3
+  }
+]

@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- Estructura de la aplicación; los datos llegan mediante la API de Flask. -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1759cc">
+  <meta name="description" content="AulaGest: administración local de aulas, horarios y reservas universitarias.">
+  <title>AulaGest · Gestión académica</title>
+  <link rel="icon" type="image/svg+xml" href="/web/assets/icons/aulagest.svg">
+  <link rel="stylesheet" href="/web/css/estilos.css">
+  <link rel="stylesheet" href="/web/css/componentes.css">
+  <link rel="stylesheet" href="/web/css/responsive.css">
+  <script type="module" src="/web/js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#dashboard"><img src="/web/assets/icons/aulagest.svg" alt="" width="38" height="38"><span>AulaGest<small>GESTIÓN ACADÉMICA</small></span></a>
+    <div class="campus"><span class="campus-mark">U</span><div>Campus universitario<small>Administración de espacios</small></div></div>
+    <p class="nav-label">ESPACIO DE TRABAJO</p>
+    <nav id="navegacion" aria-label="Navegación principal"></nav>
+    <div class="sidebar-bottom"><span class="local-dot"></span><div>Tu campus, conectado<small>Versión 1.0 · Almacenamiento local</small></div></div>
+    <div class="profile"><span class="avatar">AG</span><div>Administración<small>Prototipo universitario</small></div><span class="profile-mark">LOCAL</span></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <button id="menu" class="icon-button mobile-menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <div class="breadcrumb">AulaGest <span>/</span> <strong id="ubicacion">Dashboard</strong></div>
+      <form id="busqueda-global" role="search"><label class="search-global"><span aria-hidden="true">⌕</span><input name="q" placeholder="Buscar un aula…" aria-label="Buscar aulas por código o nombre"><kbd>↵</kbd></label></form>
+      <div class="clock"><span id="fecha-actual"></span><strong id="hora-actual"></strong></div>
+      <span class="system-status" id="estado-sistema" role="status"><i></i> Conectando</span>
+    </header>
+    <main id="contenido" tabindex="-1"><div class="loading">Cargando tu espacio de trabajo…</div></main>
+    <footer>AulaGest <span>Organización que abre espacio al aprendizaje.</span><span>America/Managua · Datos ficticios de ejemplo</span></footer>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-titulo"></dialog>
+  <div id="notificaciones" class="toasts" role="status" aria-live="polite"></div>
+  <noscript>Activa JavaScript para usar AulaGest. La aplicación necesita conectarse con el servidor local.</noscript>
+</body>
+</html>

@@ -1,0 +1,2 @@
+# Única dependencia directa del backend; pip instala sus dependencias internas.
+Flask>=3.1,<4

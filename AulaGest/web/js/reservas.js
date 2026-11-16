@@ -1,0 +1,15 @@
+// Tablas de reservas fechadas y de solicitudes ordenadas por prioridad estable.
+import {escapar as e, tabla, acciones, estado, fechaBonita, prioridades, icono} from './componentes.js';
+
+export function listaReservas(datos, filtro = '') {
+  const reservas = datos.reservas.filter(r=>!filtro || r.estado===filtro).sort((a,b)=>(a.fecha+a.inicio).localeCompare(b.fecha+b.inicio));
+  return `<div class="panel"><div class="panel-heading"><div><h2>Agenda de reservas</h2><p>Actividades extraordinarias para una fecha específica.</p></div><select id="filtro-reservas" aria-label="Estado de las reservas"><option value="">Todos los estados</option><option value="activa" ${filtro==='activa'?'selected':''}>Activas</option><option value="cancelada" ${filtro==='cancelada'?'selected':''}>Canceladas</option></select></div>${tabla(['Actividad','Aula','Fecha y hora','Docente','Estado','Acciones'],reservas.map(r=>`<tr><td><strong>${e(r.motivo)}</strong><small>${r.asistentes} asistentes</small></td><td><span class="tag">${e(r.aula)}</span></td><td class="nowrap">${fechaBonita(r.fecha)}<small>${r.inicio}–${r.fin}</small></td><td>${e(datos.docentes.find(d=>d.id===r.docente)?.nombre || r.docente)}</td><td>${estado(r.estado)}</td><td>${r.estado==='activa'?acciones('reservas',r.id):'<span class="muted">—</span>'}</td></tr>`))}</div>`;
+}
+
+export function listaSolicitudes(datos) {
+  const pendientes = datos.solicitudes.pendientes;
+  const filas = (registros, atendidas = false) => registros.map((s,i)=>`<tr><td>${atendidas ? estado(s.estado) : `<span class="badge ${s.prioridad<=2?'red':s.prioridad===3?'blue':'amber'}">${s.prioridad} · ${prioridades[s.prioridad-1]}</span>`}<small>Llegada #${s.orden}</small></td><td><strong>${e(s.motivo)}</strong><small>${e(datos.docentes.find(d=>d.id===s.docente)?.nombre || s.docente)} · ${s.asistentes} asistentes</small>${atendidas ? `<small>${e(s.resultado || '')}</small>` : ''}</td><td>${e(s.aula)}</td><td class="nowrap">${fechaBonita(s.fecha)}<small>${s.inicio}–${s.fin}</small></td><td>${atendidas ? 'Atendida' : i===0 ? '<span class="badge blue">Siguiente</span>' : `<span class="muted">En espera</span>`}</td></tr>`);
+  return `<div class="priority-info">${icono('info')} Se atiende primero la prioridad más alta (1). En caso de empate, se respeta el orden de llegada. La aprobación depende de la disponibilidad y la capacidad del aula al atender la solicitud.</div>
+    <section class="panel"><div class="panel-heading"><div><h2>Cola de solicitudes <span class="count-label">· ${pendientes.length} pendientes</span></h2><p>1 Emergencia · 2 Examen · 3 Clase · 4 Extracurricular · 5 Otra</p></div><button id="atender-solicitud" class="button primary" ${pendientes.length?'':'disabled'}>${icono('check')} Atender siguiente</button></div>${tabla(['Prioridad','Solicitud','Aula','Fecha y hora','Turno'],filas(pendientes))}</section>
+    <h2 class="tabs-caption">Solicitudes atendidas</h2><section class="panel">${tabla(['Resultado','Solicitud','Aula','Fecha y hora','Estado'],filas(datos.solicitudes.atendidas,true))}</section>`;
+}

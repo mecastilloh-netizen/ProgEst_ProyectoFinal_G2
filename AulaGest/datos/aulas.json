@@ -1,0 +1,150 @@
+[
+  {
+    "id": "A101",
+    "nombre": "Aula A101",
+    "edificio": "A",
+    "piso": 1,
+    "capacidad": 35,
+    "tipo": "Teórica",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector"
+    ]
+  },
+  {
+    "id": "A102",
+    "nombre": "Aula A102",
+    "edificio": "A",
+    "piso": 1,
+    "capacidad": 45,
+    "tipo": "Teórica",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector"
+    ]
+  },
+  {
+    "id": "A103",
+    "nombre": "Aula A103",
+    "edificio": "A",
+    "piso": 1,
+    "capacidad": 55,
+    "tipo": "Laboratorio",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector",
+      "Computadoras"
+    ]
+  },
+  {
+    "id": "A201",
+    "nombre": "Aula A201",
+    "edificio": "A",
+    "piso": 2,
+    "capacidad": 35,
+    "tipo": "Teórica",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector"
+    ]
+  },
+  {
+    "id": "A202",
+    "nombre": "Aula A202",
+    "edificio": "A",
+    "piso": 2,
+    "capacidad": 45,
+    "tipo": "Teórica",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector"
+    ]
+  },
+  {
+    "id": "A203",
+    "nombre": "Aula A203",
+    "edificio": "A",
+    "piso": 2,
+    "capacidad": 55,
+    "tipo": "Laboratorio",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector",
+      "Computadoras"
+    ]
+  },
+  {
+    "id": "B101",
+    "nombre": "Aula B101",
+    "edificio": "B",
+    "piso": 1,
+    "capacidad": 35,
+    "tipo": "Teórica",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector"
+    ]
+  },
+  {
+    "id": "B102",
+    "nombre": "Aula B102",
+    "edificio": "B",
+    "piso": 1,
+    "capacidad": 45,
+    "tipo": "Teórica",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector"
+    ]
+  },
+  {
+    "id": "B103",
+    "nombre": "Aula B103",
+    "edificio": "B",
+    "piso": 1,
+    "capacidad": 55,
+    "tipo": "Laboratorio",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector",
+      "Computadoras"
+    ]
+  },
+  {
+    "id": "B201",
+    "nombre": "Aula B201",
+    "edificio": "B",
+    "piso": 2,
+    "capacidad": 35,
+    "tipo": "Teórica",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector"
+    ]
+  },
+  {
+    "id": "B202",
+    "nombre": "Aula B202",
+    "edificio": "B",
+    "piso": 2,
+    "capacidad": 45,
+    "tipo": "Teórica",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector"
+    ]
+  },
+  {
+    "id": "B203",
+    "nombre": "Aula B203",
+    "edificio": "B",
+    "piso": 2,
+    "capacidad": 55,
+    "tipo": "Laboratorio",
+    "equipamiento": [
+      "Pizarra",
+      "Proyector",
+      "Computadoras"
+    ]
+  }
+]
