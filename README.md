@@ -1,14 +1,14 @@
 # AulaGest — Sistema de Administración y Reserva de Aulas Universitarias
 
 **Proyecto Integrador | Estructuras de Datos Dinámicas**  
-**Grupo 2**
+**Grupo 1**
 
 ---
 
 ## Integrantes del Equipo
 
 * **Ángel Corrales**
-* **Martín Castillo** (`@mecastilloh-netizen`)
+* **Martín Castillo**
 * **Manuel Canales**
 * **Jeremy Coca**
 
