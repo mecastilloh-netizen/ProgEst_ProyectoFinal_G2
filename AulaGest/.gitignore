@@ -1,0 +1,6 @@
+# Archivos locales generados durante la ejecución.
+.venv/
+__pycache__/
+*.pyc
+*.log
+datos/*.tmp
