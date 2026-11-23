@@ -4,6 +4,10 @@
 def crear_nodo(aula):
     # O(1): cada nodo conserva una referencia al aula.
     return {"clave": aula["id"], "aula": aula, "izquierda": None, "derecha": None}
+   
+    """
+    Crea un nodo del árbol binario de búsqueda para almacenar un aula.
+    """
 
 
 def insertar_aula(raiz, aula):
@@ -20,6 +24,10 @@ def insertar_aula(raiz, aula):
             actual[lado] = crear_nodo(aula)
             return raiz
         actual = actual[lado]
+        
+    """
+    Inserta un aula en el árbol binario de búsqueda.
+    """
 
 
 def buscar_aula(raiz, codigo):
@@ -29,6 +37,10 @@ def buscar_aula(raiz, codigo):
             return raiz["aula"]
         raiz = raiz["izquierda" if codigo < raiz["clave"] else "derecha"]
     return None
+
+    """
+    Busca un aula dentro del árbol utilizando su código identificador.
+    """
 
 
 def recorrido_inorden(raiz):
@@ -43,6 +55,9 @@ def recorrido_inorden(raiz):
         raiz = raiz["derecha"]
     return resultado
 
+    """
+    Recorre el árbol en orden: izquierda, raíz y derecha.
+    """
 
 def reconstruir_arbol(aulas):
     # Ordenar O(n log n); construir por mitades O(n), altura O(log n).
@@ -58,3 +73,16 @@ def reconstruir_arbol(aulas):
         return nodo
 
     return construir(0, len(ordenadas))
+
+    """
+    Reconstruye un árbol binario balanceado a partir de una lista de aulas.
+
+    Ordena los registros y utiliza una construcción recursiva
+    para seleccionar los elementos centrales.
+
+    Parámetros:
+        aulas: Lista de diccionarios con información de aulas.
+
+    Retorna:
+        La raíz del árbol reconstruido.
+    """
