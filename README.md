@@ -97,7 +97,7 @@ El motor lógico del sistema implementa **cuatro estructuras de datos dinámicas
 
 ---
 
-## 🏗️ Arquitectura del Proyecto
+## 🏗️ Diseño del Proyecto
 
 ```text
 📦 AulaGest/
