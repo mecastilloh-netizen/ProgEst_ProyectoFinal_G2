@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import campo, token with context %}
+{% block contenido %}
+{% if tipo in campos %}<p><a class="btn btn-primary" href="{{ url_for('web.formulario', tipo=tipo) }}">Registrar en {{ tipo }}</a></p>{% endif %}
+{% if tipo == 'historial' %}
+<form method="get" class="bg-white border rounded-3 p-3 mb-3 d-flex flex-wrap gap-2 align-items-end"><label>Buscar movimiento <input class="form-control mt-1" name="q" value="{{ request.args.get('q','') }}"></label> <button class="btn btn-outline-primary">Buscar</button></form>
+{% elif tipo == 'reservas' %}
+<form method="get" class="bg-white border rounded-3 p-3 mb-3 d-flex flex-wrap gap-2 align-items-end"><label>Estado <select class="form-select mt-1" name="estado"><option value="">Todos</option>{% for v in ['activa','cancelada'] %}<option {% if request.args.estado == v %}selected{% endif %}>{{ v }}</option>{% endfor %}</select></label> <button class="btn btn-outline-primary">Filtrar</button></form>
+{% elif tipo == 'horarios' %}
+<form method="get" class="bg-white border rounded-3 p-3 mb-3 d-flex flex-wrap gap-2 align-items-end"><label>Aula <select class="form-select mt-1" name="aula">{% for id,nombre in opciones.aula.items() %}<option value="{{ id }}" {% if id == aula %}selected{% endif %}>{{ nombre }}</option>{% endfor %}</select></label> <button class="btn btn-outline-primary">Consultar semana</button></form>
+{% if semana %}<div class="table-responsive bg-white border shadow-sm rounded-3 mb-3 p-2"><table class="table table-hover align-middle mb-0 caption-top"><caption class="ps-2 fw-semibold text-body">Calendario semanal · {{ aula }}</caption><thead class="table-light"><tr><th>Hora</th>{% for d in opciones.dia.values() %}<th>{{ d }}</th>{% endfor %}</tr></thead>
+<tbody>{% for hora, grupos in semana.items() %}<tr><th scope="row">{{ hora }}</th>
+{% for dia in opciones.dia %}<td>{% for h in grupos.get(dia,[]) %}<p>{{ campo('asignatura',h.asignatura) }}<br>{{ campo('docente',h.docente) }}<br>{{ h.aula }} · {{ h.inicio }}–{{ h.fin }}</p>{% endfor %}</td>{% endfor %}
+</tr>{% endfor %}</tbody></table></div>{% endif %}
+{% elif tipo == 'solicitudes' and proxima %}
+<form class="mb-3" action="{{ url_for('web.atender') }}" method="post">{{ token() }}<button class="btn btn-outline-primary">Atender siguiente solicitud</button></form>
+{% endif %}
+{% if filas %}<div class="table-responsive bg-white border shadow-sm rounded-3 mb-3 p-2"><table class="table table-hover align-middle mb-0 caption-top"><caption class="ps-2 fw-semibold text-body">Registros de {{ tipo }}</caption><thead class="table-light"><tr>{% for c in columnas %}<th scope="col">{{ etiquetas.get(c,c|capitalize) }}</th>{% endfor %}{% if tipo not in ('historial','solicitudes') %}<th>Acciones</th>{% endif %}</tr></thead>
+<tbody>{% for r in filas %}<tr>{% for c in columnas %}<td>{{ campo(c,r.get(c)) }}</td>{% endfor %}
+{% if tipo not in ('historial','solicitudes') %}<td>{% if r.get('estado') != 'cancelada' %}
+<a href="{{ url_for('web.formulario', tipo=tipo, codigo=r.id) }}">Editar</a> · <a href="{{ url_for('web.eliminar', tipo=tipo, codigo=r.id) }}">{{ 'Cancelar' if tipo == 'reservas' else 'Eliminar' }}</a>{% endif %}</td>{% endif %}
+</tr>{% endfor %}</tbody></table></div>{% else %}<p class="alert alert-light border">Sin registros.</p>{% endif %}
+{% if tipo == 'edificios' %}{% include 'mapa.html' %}{% endif %}
+{% endblock %}

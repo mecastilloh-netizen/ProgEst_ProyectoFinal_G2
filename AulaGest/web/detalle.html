@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import actividad, campo with context %}
+{% block contenido %}
+<section class="card p-3 p-md-4 shadow-sm mb-3"><p class="fw-semibold">{{ aula.id }} · Edificio {{ aula.edificio }} · Piso {{ aula.piso }} · {{ aula.capacidad }} plazas · {{ aula.tipo }}</p>
+<p>Equipamiento: {{ aula.equipamiento|join(', ') or 'Sin registrar' }}.</p>
+<p>Estado actual: {{ estado.estado|replace('_',' ') }}. {% if estado.actual %}{{ actividad(estado.actual) }} · {{ estado.minutos_restantes }} minutos restantes. El aula se libera a las {{ estado.liberacion }}.{% endif %}</p>
+{% for etiqueta, evento in [('Próxima actividad', estado.proxima), ('Próxima clase', estado.proxima_clase)] %}
+<p>{{ etiqueta }}: {% if evento %}{{ actividad(evento) }} · {{ evento.fecha }} · {{ evento.inicio }}{% else %}Sin programar{% endif %}</p>{% endfor %}
+</section><h2 class="h5">Clases semanales</h2><ul class="list-group mb-4">{% for h in clases %}<li class="list-group-item">{{ campo('dia',h.dia) }} {{ h.inicio }}–{{ h.fin }} · {{ campo('asignatura',h.asignatura) }} · {{ campo('docente',h.docente) }}</li>{% else %}<li class="list-group-item">Sin clases.</li>{% endfor %}</ul>
+<h2 class="h5">Reservas activas</h2><ul class="list-group mb-4">{% for r in reservas %}<li class="list-group-item">{{ r.fecha }} {{ r.inicio }}–{{ r.fin }} · {{ r.motivo }}</li>{% else %}<li class="list-group-item">Sin reservas.</li>{% endfor %}</ul>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import token with context %}
+{% block contenido %}
+{% if error %}<p class="alert alert-danger" role="alert"><strong>{{ error }}</strong></p>{% endif %}
+<form method="post" class="card shadow-sm p-3 p-md-4"><div class="row g-3">
+  {{ token() }}
+  {% for clave in campos[tipo] %}
+    {% set valor = valores.get(clave, '') %}
+    <div class="col-12 col-md-6"><label class="d-block fw-medium">{{ etiquetas.get(clave, clave|capitalize) }}
+    {% if clave in opciones %}
+      <select class="form-select mt-1" name="{{ clave }}" required><option value="">Seleccionar</option>
+      {% for id,nombre in opciones[clave].items() %}<option value="{{ id }}" {% if id|string == valor|string %}selected{% endif %}>{{ nombre }}</option>{% endfor %}</select>
+    {% else %}
+      <input class="form-control mt-1" name="{{ clave }}" value="{{ valor }}"
+        type="{{ 'number' if clave in numeros else 'date' if clave == 'fecha' else 'time' if clave in ('inicio','fin') else 'text' }}"
+        {% if codigo and clave == 'id' %}readonly{% endif %} {% if clave != 'equipamiento' %}required{% endif %}>
+    {% endif %}</label>{% if clave == 'equipamiento' %} <small class="form-text">Separa los elementos con comas.</small>{% endif %}</div>
+  {% endfor %}
+  </div><div class="border-top mt-4 pt-3 d-flex gap-2"><button class="btn btn-primary">Guardar</button> <a class="btn btn-outline-secondary" href="{{ url_for('web.listado', tipo=tipo) }}">Volver</a></div>
+</form>
+{% endblock %}

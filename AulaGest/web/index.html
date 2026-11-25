@@ -1,41 +1,80 @@
-<!doctype html>
-<!-- Estructura de la aplicación; los datos llegan mediante la API de Flask. -->
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1759cc">
-  <meta name="description" content="AulaGest: administración local de aulas, horarios y reservas universitarias.">
-  <title>AulaGest · Gestión académica</title>
-  <link rel="icon" type="image/svg+xml" href="/web/assets/icons/aulagest.svg">
-  <link rel="stylesheet" href="/web/css/estilos.css">
-  <link rel="stylesheet" href="/web/css/componentes.css">
-  <link rel="stylesheet" href="/web/css/responsive.css">
-  <script type="module" src="/web/js/app.js"></script>
-</head>
-<body>
-  <a class="skip" href="#contenido">Saltar al contenido</a>
-  <aside class="sidebar" id="sidebar">
-    <a class="brand" href="#dashboard"><img src="/web/assets/icons/aulagest.svg" alt="" width="38" height="38"><span>AulaGest<small>GESTIÓN ACADÉMICA</small></span></a>
-    <div class="campus"><span class="campus-mark">U</span><div>Campus universitario<small>Administración de espacios</small></div></div>
-    <p class="nav-label">ESPACIO DE TRABAJO</p>
-    <nav id="navegacion" aria-label="Navegación principal"></nav>
-    <div class="sidebar-bottom"><span class="local-dot"></span><div>Tu campus, conectado<small>Versión 1.0 · Almacenamiento local</small></div></div>
-    <div class="profile"><span class="avatar">AG</span><div>Administración<small>Prototipo universitario</small></div><span class="profile-mark">LOCAL</span></div>
-  </aside>
-  <div class="workspace">
-    <header class="topbar">
-      <button id="menu" class="icon-button mobile-menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
-      <div class="breadcrumb">AulaGest <span>/</span> <strong id="ubicacion">Dashboard</strong></div>
-      <form id="busqueda-global" role="search"><label class="search-global"><span aria-hidden="true">⌕</span><input name="q" placeholder="Buscar un aula…" aria-label="Buscar aulas por código o nombre"><kbd>↵</kbd></label></form>
-      <div class="clock"><span id="fecha-actual"></span><strong id="hora-actual"></strong></div>
-      <span class="system-status" id="estado-sistema" role="status"><i></i> Conectando</span>
-    </header>
-    <main id="contenido" tabindex="-1"><div class="loading">Cargando tu espacio de trabajo…</div></main>
-    <footer>AulaGest <span>Organización que abre espacio al aprendizaje.</span><span>America/Managua · Datos ficticios de ejemplo</span></footer>
+{% extends 'base.html' %}
+{% from 'macros.html' import actividad with context %}
+{% block cabecera %}
+  <a class="btn btn-primary" href="{{ url_for('web.formulario', tipo='reservas' if resumen else 'aulas') }}">
+    {{ 'Nueva reserva' if resumen else 'Registrar aula' }}
+  </a>
+{% endblock %}
+{% block contenido %}
+{% if resumen %}
+<div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-2 g-lg-3 mb-4">
+  {% for etiqueta, valor, color in [
+      ('Total de aulas', resumen.total, 'primary'), ('Disponibles', resumen.disponibles, 'success'),
+      ('Ocupadas', resumen.ocupadas, 'danger'), ('Reservas de hoy', resumen.reservas_hoy, 'info'),
+      ('Solicitudes pendientes', resumen.pendientes, 'warning')] %}
+    <div class="col"><div class="card h-100 rounded-3 shadow-sm">
+      <div class="card-body border-top border-3 border-{{ color }} rounded-top">
+        <span class="small text-secondary">{{ etiqueta }}</span>
+        <strong class="d-block fs-2">{{ valor }}</strong>
+      </div>
+    </div></div>
+  {% endfor %}
+</div>
+{% endif %}
+<section class="card rounded-3 shadow-sm">
+  <div class="card-body p-3 p-md-4">
+    <h2 class="h5 fw-semibold mb-3">Disponibilidad de aulas</h2>
+    <form method="get">
+      <div class="row g-2 align-items-end">
+        <div class="col-12 col-md-4"><label class="form-label" for="buscar">Código o nombre</label>
+          <input class="form-control" id="buscar" name="q" value="{{ request.args.get('q','') }}" placeholder="Ej. A101"></div>
+        <div class="col-6 col-md-3"><label class="form-label" for="edificio">Edificio</label>
+          <select class="form-select" id="edificio" name="edificio"><option value="">Todos</option>
+          {% for id,nombre in opciones.edificio.items() %}<option value="{{ id }}" {% if id == request.args.edificio %}selected{% endif %}>{{ nombre }}</option>{% endfor %}</select></div>
+        <div class="col-6 col-md-3"><label class="form-label" for="estado">Estado</label>
+          <select class="form-select" id="estado" name="estado"><option value="">Todos</option>
+          {% for id in ['disponible','ocupada','por_liberarse'] %}<option value="{{ id }}" {% if id == request.args.estado %}selected{% endif %}>{{ id|replace('_',' ')|capitalize }}</option>{% endfor %}</select></div>
+        <div class="col-12 col-md-2 d-grid"><button class="btn btn-outline-primary">Consultar</button></div>
+      </div>
+      <div class="mt-3">
+        <details {% if request.args.piso or request.args.capacidad or request.args.fecha or request.args.hora or request.args.inicio or request.args.fin %}open{% endif %}>
+          <summary class="small text-primary fw-semibold">Más filtros</summary>
+          <div class="row row-cols-2 row-cols-md-3 g-2 mt-1">
+          {% for clave, nombre, tipo in [('piso','Piso','number'),('capacidad','Capacidad mínima','number'),('fecha','Fecha','date'),('hora','Estado a las','time'),('inicio','Libre desde','time'),('fin','Libre hasta','time')] %}
+            <div class="col"><label class="form-label" for="f-{{ clave }}">{{ nombre }}</label>
+            <input class="form-control" id="f-{{ clave }}" type="{{ tipo }}" name="{{ clave }}" value="{{ request.args.get(clave,'') }}" {% if tipo == 'number' %}min="0"{% endif %}></div>
+          {% endfor %}
+          </div>
+        </details>
+        {% if request.args %}<a class="small d-inline-block mt-2" href="{{ request.path }}">Limpiar filtros</a>{% endif %}
+      </div>
+    </form>
   </div>
-  <dialog id="modal" aria-labelledby="modal-titulo"></dialog>
-  <div id="notificaciones" class="toasts" role="status" aria-live="polite"></div>
-  <noscript>Activa JavaScript para usar AulaGest. La aplicación necesita conectarse con el servidor local.</noscript>
-</body>
-</html>
+  {% if aulas %}
+  <div class="table-responsive">
+    <table class="table table-hover align-middle mb-0">
+      <caption class="px-3 small">{{ aulas|length }} aulas en la consulta</caption>
+      <thead class="table-light small"><tr>
+        <th scope="col" class="ps-3">Aula</th><th scope="col">Ubicación</th><th scope="col">Plazas</th>
+        <th scope="col">Estado</th><th scope="col">Actividad en curso</th>
+        {% if not resumen %}<th scope="col">Acciones</th>{% endif %}
+      </tr></thead>
+      <tbody>{% for a in aulas %}<tr>
+        <th scope="row" class="ps-3 py-3"><a class="link-primary text-decoration-none" href="{{ url_for('web.detalle', codigo=a.id) }}">{{ a.nombre }}</a>
+          {% if a.id|lower not in a.nombre|lower %}<small class="d-block text-secondary">{{ a.id }}</small>{% endif %}</th>
+        <td class="text-nowrap">Edificio {{ a.edificio }}<small class="d-block text-secondary">Piso {{ a.piso }}</small></td>
+        <td>{{ a.capacidad }}</td>
+        <td>{% set color = {'disponible':'success', 'ocupada':'danger', 'por_liberarse':'warning'}[a.estado] %}
+          <span class="badge bg-{{ color }}-subtle text-{{ color }}-emphasis rounded-pill">{{ a.estado|replace('_',' ')|capitalize }}</span>
+          {% if a.liberacion %}<small class="d-block text-secondary">Libre a las {{ a.liberacion }}</small>{% endif %}</td>
+        <td>{{ actividad(a.actual) }}</td>
+        {% if not resumen %}<td><div class="d-flex gap-2">
+          <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('web.formulario', tipo='aulas', codigo=a.id) }}">Editar</a>
+          <a class="btn btn-sm btn-outline-danger" href="{{ url_for('web.eliminar', tipo='aulas', codigo=a.id) }}">Eliminar</a>
+        </div></td>{% endif %}
+      </tr>{% endfor %}</tbody>
+    </table>
+  </div>
+  {% else %}<p class="text-secondary px-4 py-3 border-top mb-0">No se encontraron aulas.</p>{% endif %}
+</section>
+{% endblock %}

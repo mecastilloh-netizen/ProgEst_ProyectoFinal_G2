@@ -1,0 +1,7 @@
+{% macro campo(nombre, valor) -%}
+  {% if valor is none %}—{% elif nombre in opciones %}{{ opciones[nombre].get(valor, valor) }}{% elif valor is sequence and valor is not string %}{{ valor|join(', ') }}{% else %}{{ valor }}{% endif %}
+{%- endmacro %}
+{% macro actividad(evento) -%}
+  {% if evento %}{{ campo('asignatura', evento.asignatura) if evento.tipo_registro == 'horario' else evento.motivo }}{% else %}—{% endif %}
+{%- endmacro %}
+{% macro token() %}<input type="hidden" name="token" value="{{ token_formulario() }}">{% endmacro %}
