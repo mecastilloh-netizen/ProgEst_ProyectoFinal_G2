@@ -1,6 +1,6 @@
 # AulaGest V1
 
-Prototipo universitario funcional para administrar aulas, horarios semanales, reservas extraordinarias y solicitudes con prioridad. Interfaz en español, Python con Flask, JavaScript vanilla y almacenamiento JSON local. Los nombres y registros iniciales son ficticios.
+Prototipo universitario funcional para administrar aulas, horarios semanales, reservas extraordinarias y solicitudes con prioridad. Interfaz en español, HTML generado por Python con Flask y almacenamiento JSON local. Los nombres y registros iniciales son ficticios.
 
 ## Ejecutar
 
@@ -41,7 +41,7 @@ El entorno virtual es local a la máquina; no debe copiarse como parte de una en
 
 | Sección | Funciones conectadas al backend |
 | --- | --- |
-| Dashboard | Cinco estadísticas, tarjetas de aulas, estado actual, actividad, liberación y tiempo restante. |
+| Dashboard | Cinco estadísticas, tabla de aulas, estado actual, actividad, liberación y tiempo restante. |
 | Aulas | Crear, editar, eliminar, buscar por código o nombre, consultar horarios y equipamiento. |
 | Horarios | Calendario recurrente de lunes a sábado por aula; crear, editar y eliminar clases. |
 | Reservas | Crear, modificar y cancelar actividades con fecha específica; consultar activas y canceladas. |
@@ -51,18 +51,18 @@ El entorno virtual es local a la máquina; no debe copiarse como parte de una en
 | Solicitudes | Crear solicitudes, consultar la cola y atender la siguiente según prioridad y llegada. |
 | Historial | Ver y buscar movimientos persistentes, del más reciente al más antiguo. |
 
-La navegación usa fragmentos de URL (`#aulas`, `#horarios`, etc.) y actualiza el contenido sin recargar el documento. El buscador superior lleva a la sección Aulas. Los formularios muestran los errores del servidor sin perder lo escrito.
+Flask genera cada página en el servidor con las plantillas HTML de `web/`. La presentación usa [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/) con una copia local de su CSS y licencia en `web/assets/bootstrap/`. Los enlaces y filtros hacen peticiones GET. Los formularios envían los cambios por POST y muestran los errores de validación junto a los datos introducidos.
 
 ### Disponibilidad y filtros
 
 - Filtra por edificio, piso, capacidad mínima y estado. El filtro «Ocupadas» incluye las aulas próximas a liberarse.
-- En «Consultar otra fecha, hora o intervalo» selecciona una fecha y una hora para consultar el estado. Si omites la fecha se usa hoy; si omites la hora se usa la hora actual de Nicaragua.
-- Para buscar un aula libre durante un intervalo, llena **ambas** horas «Libre desde» y «Libre hasta» y aplica el filtro. Las tarjetas reflejan el estado en la hora consultada, y la selección del aula garantiza que no tiene ocupaciones en el intervalo solicitado.
-- Las estadísticas superiores corresponden siempre al momento actual, aunque el listado esté filtrado por otra fecha. La interfaz lo indica.
-- Verde: disponible. Rojo: ocupada. Amarillo: quedará libre en 30 minutos o menos.
+- En «Filtrar aulas» selecciona una fecha y una hora para consultar el estado. Si omites la fecha se usa hoy; si omites la hora se usa la hora actual de Nicaragua.
+- Para buscar un aula libre durante un intervalo, llena **ambas** horas «Libre desde» y «Libre hasta» y aplica el filtro. Las filas reflejan el estado en la hora consultada, y la selección del aula garantiza que no tiene ocupaciones en el intervalo solicitado.
+- Las estadísticas superiores corresponden siempre al momento actual, aunque el listado esté filtrado por otra fecha.
+- Los estados se muestran con texto. «Por liberarse» indica que faltan 30 minutos o menos.
 - Si hay actividades consecutivas, la liberación corresponde al final de la cadena. El tiempo restante indica el de la actividad actual. La siguiente actividad puede empezar inmediatamente después.
 - El detalle de un aula consulta su estado **actual**, sus clases semanales y sus reservas activas.
-- La vista de aulas y el dashboard consultan de nuevo cada 30 segundos, salvo cuando la pestaña está oculta, hay un diálogo abierto o el usuario está escribiendo. El reloj se actualiza cada segundo, sincronizado con la hora recibida del servidor. Las demás vistas se actualizan al navegar o realizar una operación para evitar interrumpir la lectura.
+- La hora y la disponibilidad corresponden al momento de cargar o consultar la página. Recarga para actualizarlas.
 
 ### Reglas de horarios y reservas
 
@@ -101,7 +101,7 @@ AulaGest/
 ├── monticulos.py            # Cola de prioridad estable con heapq
 ├── horarios.py              # Fechas, intervalos, conflictos y disponibilidad
 ├── archivos.py              # Toda la lectura/escritura JSON y datos iniciales
-├── pruebas.py               # 22 pruebas unittest aisladas
+├── pruebas.py               # 23 pruebas unittest aisladas
 ├── verificar_http.py        # Prueba de dos procesos reales de Flask
 ├── requirements.txt
 ├── README.md
@@ -117,19 +117,10 @@ AulaGest/
 │   ├── edificios.json
 │   ├── solicitudes.json
 │   └── historial.json
+├── paginas.py               # Rutas de páginas y formularios Flask
 └── web/
-    ├── index.html
-    ├── css/
-    │   ├── estilos.css
-    │   ├── componentes.css
-    │   └── responsive.css
-    ├── js/
-    │   ├── app.js
-    │   ├── api.js
-    │   ├── aulas.js
-    │   ├── horarios.js
-    │   ├── reservas.js
-    │   └── componentes.js
+    ├── base.html, index.html, listado.html, detalle.html
+    ├── formulario.html, confirmar.html, mapa.html, error.html, macros.html
     └── assets/icons/aulagest.svg
 ```
 
@@ -138,7 +129,7 @@ AulaGest/
 Flujo de una operación:
 
 ```text
-Formulario HTML → api.js / fetch → servidor.py → servicios.py
+Formulario HTML → Flask (paginas.py) → servicios.py
                                                     ↓
                                  estructuras + horarios + archivos
                                                     ↓
@@ -166,7 +157,7 @@ El bloqueo de peticiones protege operaciones concurrentes dentro de **un proceso
 
 ### Zona horaria
 
-El backend intenta usar `ZoneInfo('America/Managua')`. Algunos equipos Windows no incluyen la base IANA; en ese caso usa un respaldo de UTC−06:00 con el nombre `America/Managua`, sin instalar otra dependencia. El frontend siempre formatea con `America/Managua`. El respaldo está pensado para fechas contemporáneas, no para conversiones históricas con cambios de horario. La [documentación oficial de zoneinfo](https://docs.python.org/3/library/zoneinfo.html#data-sources) explica la disponibilidad de datos de zona en Windows.
+El backend intenta usar `ZoneInfo('America/Managua')`. Algunos equipos Windows no incluyen la base IANA; en ese caso usa un respaldo de UTC−06:00 con el nombre `America/Managua`, sin instalar otra dependencia. Flask muestra la hora local de Nicaragua en el HTML. El respaldo está pensado para fechas contemporáneas, no para conversiones históricas con cambios de horario. La [documentación oficial de zoneinfo](https://docs.python.org/3/library/zoneinfo.html#data-sources) explica la disponibilidad de datos de zona en Windows.
 
 ## API REST
 
@@ -248,13 +239,11 @@ En el entorno Windows preparado:
 .\.venv\Scripts\python.exe verificar_http.py
 ```
 
-Las **22 pruebas** incluyen árbol e inexistentes, inorden, BFS, eliminación de aristas, prioridades y FIFO, listas, intervalos consecutivos, liberación continua, JSON UTF-8, conservación de corrupción, API/recursos, CRUD, referencias, capacidad, reservas y reinicio, filtros, validaciones y recuperación del diario. Usan `TemporaryDirectory`; no modifican `datos/` del proyecto.
+Las **23 pruebas** incluyen árbol e inexistentes, inorden, BFS, eliminación de aristas, prioridades y FIFO, listas, intervalos consecutivos, liberación continua, JSON UTF-8, conservación de corrupción, API/recursos, CRUD, referencias, capacidad, reservas y reinicio, filtros, validaciones y recuperación del diario. Usan `TemporaryDirectory`; no modifican `datos/` del proyecto.
 
 `verificar_http.py` inicia Flask en un puerto libre con datos temporales, consulta HTML y los diez endpoints de lectura, crea un aula y una reserva, comprueba el JSON, termina el proceso, inicia otro y comprueba la persistencia. Cierra ambos procesos y limpia su directorio temporal.
 
-La entrega incluye comprobación de sintaxis de los seis módulos JavaScript y ejecución aislada de funciones de formato, escape y generación de las vistas. **La revisión visual y de consola en navegador quedó pendiente:** Computer Use detuvo el acceso porque no pudo determinar de forma fiable la URL de Chrome. No se presenta la revisión estática como una prueba de interacción real. Consulta `INFORME_VERIFICACION.md`.
-
-Para la revisión manual pendiente: abre cada apartado, registra un aula nueva, edítala, comprueba la validación de duplicados, programa una clase, intenta una reserva que se cruce y otra consecutiva, atiende solicitudes, consulta una ruta y revisa la consola del navegador. Comprueba también una ventana estrecha: menú plegable, formularios y desplazamiento horizontal del calendario y tablas.
+Las pruebas de interfaz consultan las páginas y envían formularios directamente a Flask. Comprueban las altas, los errores, la cancelación de reservas y la atención de solicitudes.
 
 ## Cómo reconstruir un módulo eliminado
 
@@ -271,13 +260,7 @@ Primero intenta restaurarlo desde una copia o Git. Si necesitas reescribirlo, re
 | `servicios.py` | Mantener las funciones invocadas por `servidor.py`: `iniciar_sistema`, `obtener`, `guardar_aula`, `eliminar_registro`, `guardar_catalogo`, `guardar_evento`, `cancelar_reserva`, `crear_solicitud`, `listar_solicitudes`, `procesar_solicitud`, `consultar_aulas`, `resumen`, `consultar_ruta`, `modificar_conexion`. Reciben `sistema` como primer argumento. Usar `ValueError` para validaciones, `LookupError` para inexistentes y `FileExistsError` para conflictos. |
 | `servidor.py` | `crear_app(carpeta_datos=None)` devuelve Flask. Restaurar las rutas de la tabla REST, JSON y la exclusión mutua de peticiones. No trasladar validaciones aquí. |
 | `main.py` | `main()` y llamada protegida por `if __name__ == '__main__'`. Debe iniciar `crear_app`, escuchar en loopback y admitir `--puerto` y `--datos`. |
-| `web/js/api.js` | Exportar `api(ruta,metodo='GET',datos)` y `consulta(filtros)`; prefijo `/api`, fetch asíncrono y errores como `Error`. |
-| `web/js/componentes.js` | Mantener exportaciones de formato, escape, iconos, tablas, estados, opciones, modales y formularios importadas por las otras vistas. Escape obligatorio para datos dinámicos. |
-| `web/js/aulas.js` | `filtrosAulas(edificios,filtros)`, `tarjetasAulas(aulas,datos,gestionar)`, `estadisticas(resumen)`, `detallesAula(aula,datos)`. |
-| `web/js/horarios.js` | `calendario(datos,aulaSeleccionada)`: devuelve HTML del calendario y lista editable. |
-| `web/js/reservas.js` | `listaReservas(datos,filtro)` y `listaSolicitudes(datos)`: devuelven HTML. |
-| `web/js/app.js` | Coordinar carga API, navegación, formulario, eventos y refresco. Conservar atributos `data-*` que producen las vistas. |
-| `web/index.html` y CSS | Conservar ids `contenido`, `sidebar`, `navegacion`, `ubicacion`, `busqueda-global`, `menu`, `modal`, `notificaciones`, `fecha-actual`, `hora-actual`, `estado-sistema`. CSS solo afecta presentación. |
+| `paginas.py` y `web/*.html` | Rutas Flask y plantillas de páginas, formularios y consultas. Delegan validación y persistencia en las funciones de servicios. |
 | `pruebas.py` | Funciones `test_*` y `load_tests` que construye una suite de `unittest.FunctionTestCase`; usar temporales. |
 | `verificar_http.py` | `main()` verifica dos arranques y cierra procesos en `finally`; nunca apuntar a datos principales. |
 
@@ -291,6 +274,6 @@ Reconstruye primero los módulos independientes (árbol, grafo, listas y montíc
 - Se permiten registros de fechas pasadas para practicar consultas históricas. No hay política de plazos o cancelaciones.
 - El grafo representa conectividad; BFS minimiza conexiones, no distancia física ni accesibilidad. Los pasillos y enlaces de las aulas se derivan del edificio y piso. Se pueden administrar los enlaces entre edificios.
 - JSON y reconstrucción de índices son adecuados para el tamaño académico de ejemplo. No hay bloqueo entre procesos ni sincronización de ediciones manuales externas.
-- El diseño responsive está implementado, pero falta la verificación visual y de interacción en navegador por el bloqueo de Computer Use descrito arriba.
+- Los formularios y tablas usan Bootstrap local y funcionan sin JavaScript.
 
 Referencia del servidor: [guía oficial de Flask](https://flask.palletsprojects.com/en/stable/quickstart/). Las funciones de negocio y estructuras se implementan directamente en los módulos del proyecto.

@@ -154,13 +154,51 @@ def test_api_y_frontend():
             respuesta = cliente.get("/api/" + endpoint)
             comprobar.assertEqual(respuesta.status_code, 200, endpoint)
             comprobar.assertTrue(respuesta.is_json)
-        with cliente.get("/") as respuesta:
-            comprobar.assertEqual(respuesta.status_code, 200)
-        for recurso in ("js/app.js", "js/api.js", "js/aulas.js", "js/horarios.js", "js/reservas.js", "js/componentes.js", "css/estilos.css", "css/componentes.css", "css/responsive.css", "assets/icons/aulagest.svg"):
-            with cliente.get("/web/" + recurso) as respuesta:
-                comprobar.assertEqual(respuesta.status_code, 200, recurso)
+        for ruta in ("/", "/aulas", "/horarios", "/reservas", "/docentes", "/asignaturas",
+                     "/edificios", "/solicitudes", "/historial", "/aulas/A101/detalle",
+                     "/edificios?origen=A101&destino=B101", "/reservas/nuevo"):
+            respuesta = cliente.get(ruta)
+            comprobar.assertEqual(respuesta.status_code, 200, ruta)
+            comprobar.assertEqual(respuesta.mimetype, "text/html")
+            comprobar.assertNotRegex(respuesta.get_data(as_text=True).lower(),
+                                     r"<script\b|<style\b|\sstyle=")
+            comprobar.assertIn('href="/web/assets/bootstrap/bootstrap.min.css"', respuesta.get_data(as_text=True))
+        with cliente.get("/web/assets/bootstrap/bootstrap.min.css") as hoja:
+            comprobar.assertEqual(hoja.status_code, 200)
+            comprobar.assertEqual(hoja.mimetype, "text/css")
+            comprobar.assertRegex(hoja.data[:180], rb"Bootstrap\s+v5\.3\.9")
+        for obsoleta in ("/web/js/app.js", "/web/css/estilos.css"):
+            comprobar.assertEqual(cliente.get(obsoleta).status_code, 404)
         comprobar.assertEqual(cliente.get("/api/aulas/NO-EXISTE").status_code, 404)
         comprobar.assertEqual(cliente.get("/api/inexistente").status_code, 404)
+
+
+def test_formularios_flask():
+    import re
+    with entorno() as (cliente, carpeta, _):
+        html = cliente.get("/aulas/nuevo").get_data(as_text=True)
+        token = re.search(r'name="token" value="([a-f0-9]+)"', html).group(1)
+        aula = {**aula_prueba(), "equipamiento": "Pizarra, Proyector"}
+        comprobar.assertEqual(cliente.post("/aulas/nuevo", data=aula).status_code, 403)
+        aula["token"] = token
+        comprobar.assertEqual(cliente.post("/aulas/nuevo", data=aula).status_code, 303)
+        comprobar.assertEqual(cliente.post("/aulas/nuevo", data=aula).status_code, 409)
+        aula["nombre"] = "Aula de práctica"
+        comprobar.assertEqual(cliente.post("/aulas/Z999/editar", data=aula).status_code, 303)
+        comprobar.assertIn(aula["nombre"], cliente.get("/aulas/Z999/detalle").get_data(as_text=True))
+        reserva = {**reserva_prueba(aula="Z999"), "token": token}
+        comprobar.assertEqual(cliente.post("/reservas/nuevo", data=reserva).status_code, 303)
+        comprobar.assertEqual(cliente.post("/reservas/nuevo", data=reserva).status_code, 409)
+        guardada = next(r for r in cliente.get("/api/reservas").json if r["aula"] == "Z999")
+        confirmar = "/reservas/" + guardada["id"] + "/eliminar"
+        comprobar.assertIn("Cancelar reserva", cliente.get(confirmar).get_data(as_text=True))
+        comprobar.assertEqual(cliente.post(confirmar, data={"token": token}).status_code, 303)
+        comprobar.assertEqual(cliente.post("/solicitudes/nuevo", data={**reserva, "prioridad": "1"}).status_code, 303)
+        atendida = cliente.post("/solicitudes/atender", data={"token": token}, follow_redirects=True)
+        comprobar.assertIn("Solicitud aprobada.", atendida.get_data(as_text=True))
+        recargado = crear_app(carpeta).test_client()
+        estados = [r["estado"] for r in recargado.get("/api/reservas").json if r["aula"] == "Z999"]
+        comprobar.assertCountEqual(estados, ["activa", "cancelada"])
 
 
 def test_crud_aula_persistencia_arbol():

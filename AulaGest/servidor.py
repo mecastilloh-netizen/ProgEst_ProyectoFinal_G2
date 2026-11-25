@@ -1,32 +1,53 @@
 """Adaptador Flask: rutas HTTP delgadas que delegan las reglas a servicios.py."""
 from pathlib import Path
 from threading import RLock
-from flask import Flask, jsonify, request, g
+from secrets import compare_digest, token_hex
+from flask import Flask, jsonify, render_template, request, session, g
 from werkzeug.exceptions import HTTPException
 import servicios
 import listas
+from paginas import web
 
 
 def crear_app(carpeta_datos=None):
     base = Path(__file__).resolve().parent
-    app = Flask(__name__, static_folder=str(base / "web"), static_url_path="/web")
+    app = Flask(__name__, template_folder=str(base / "web"),
+                static_folder=str(base / "web" / "assets"), static_url_path="/web/assets")
+    app.secret_key = token_hex(32)
+    app.register_blueprint(web)
     app.json.ensure_ascii = False
     app.config["MAX_CONTENT_LENGTH"] = 64 * 1024
     sistema = servicios.iniciar_sistema(carpeta_datos or base / "datos")
     app.config["SISTEMA"] = sistema
     bloqueo = RLock()
 
+    @app.template_global()
+    def token_formulario():
+        if "token" not in session:
+            session["token"] = token_hex(24)
+        return session["token"]
+
+    def responder_error(mensaje, estado):
+        if request.path.startswith("/api/"):
+            return jsonify(error=mensaje), estado
+        return render_template("error.html", titulo="No se pudo completar la operación",
+                               mensaje=mensaje), estado
+
     @app.before_request
     def proteger_estado():
         # Un proceso local; evita que dos peticiones pierdan cambios entre sí.
         bloqueo.acquire()
         g.bloqueado = True
-        if request.path.startswith("/api/") and request.method in ("POST", "PUT", "DELETE"):
+        if request.method in ("POST", "PUT", "DELETE"):
             if sistema.get("error_escritura"):
-                return jsonify(error="Guardado interrumpido. Reinicie el servidor para recuperar el diario JSON."), 503
+                return responder_error("Guardado interrumpido. Reinicie el servidor para recuperar el diario JSON.", 503)
             origen = request.headers.get("Origin")
             if origen and origen.rstrip("/") != request.host_url.rstrip("/"):
-                return jsonify(error="Las modificaciones deben realizarse desde AulaGest local."), 403
+                return responder_error("Las modificaciones deben realizarse desde AulaGest local.", 403)
+            if request.blueprint == "web":
+                enviado = request.form.get("token", "").encode()
+                if not session.get("token") or not compare_digest(session["token"].encode(), enviado):
+                    return responder_error("Vuelve a abrir el formulario para enviarlo.", 403)
 
     @app.teardown_request
     def liberar_estado(error=None):
@@ -35,7 +56,7 @@ def crear_app(carpeta_datos=None):
 
     @app.after_request
     def cabeceras(respuesta):
-        if request.path.startswith("/api/"):
+        if request.endpoint != "static":
             respuesta.headers["Cache-Control"] = "no-store"
         respuesta.headers["X-Content-Type-Options"] = "nosniff"
         return respuesta
@@ -49,25 +70,21 @@ def crear_app(carpeta_datos=None):
         elif isinstance(error, ValueError):
             estado = 400
         elif isinstance(error, HTTPException):
-            return jsonify(error=error.description), error.code
+            return responder_error(error.description, error.code)
         elif isinstance(error, OSError):
             sistema["error_escritura"] = True
             app.logger.exception("Error al guardar JSON")
-            return jsonify(error="No se pudo guardar en disco. Revise permisos y espacio; reinicie para recuperar cambios."), 503
+            return responder_error("No se pudo guardar en disco. Revise permisos y espacio; reinicie para recuperar cambios.", 503)
         else:
             app.logger.exception("Error inesperado")
-            return jsonify(error="Error interno. Consulte la terminal del servidor."), 500
-        return jsonify(error=str(error)), estado
+            return responder_error("Error interno. Consulte la terminal del servidor.", 500)
+        return responder_error(str(error), estado)
 
     def entrada():
         datos = request.get_json()
         if not isinstance(datos, dict):
             raise ValueError("El cuerpo JSON debe ser un objeto.")
         return datos
-
-    @app.get("/")
-    def index():
-        return app.send_static_file("index.html")
 
     @app.get("/api/resumen")
     def resumen():

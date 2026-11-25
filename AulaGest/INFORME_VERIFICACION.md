@@ -1,13 +1,13 @@
 # Verificación de AulaGest V1
 
-Fecha: 6 de noviembre de 2026. Zona de referencia: America/Managua.
+Fecha: 23 de noviembre de 2026. Zona de referencia: America/Managua.
 
 ## Resultados observados
 
 | Verificación | Resultado |
 | --- | --- |
 | Entorno local | Python 3.13.18, entorno virtual `.venv`, Flask 3.1.3 instalado. |
-| `python pruebas.py` | 22 pruebas aprobadas; sin advertencias de archivos abiertos en la ejecución final. |
+| `python pruebas.py` | 23 pruebas aprobadas; sin advertencias de archivos abiertos en la ejecución final. |
 | `python verificar_http.py` | Aprobado: HTML y 10 endpoints GET mediante HTTP real. |
 | Guardado de aula por HTTP | POST 201 y comprobación de su presencia en `aulas.json` temporal. |
 | Reinicio del servidor | Segundo proceso encuentra el aula, la reserva y el historial creados en el primero. |
@@ -16,11 +16,8 @@ Fecha: 6 de noviembre de 2026. Zona de referencia: America/Managua.
 | Corrupción JSON | Archivos inválidos conservados; inicio rechazado con error claro. |
 | Escritura interrumpida | Original preservado ante fallo de reemplazo; diario recuperado al volver a cargar. |
 | Python | Compilación de los módulos sin errores de sintaxis. |
-| JavaScript | Los seis módulos analizados con `vm.SourceTextModule`, sin errores de sintaxis. |
-| Funciones de presentación JS | Comprobados escape de texto, formato de hora, filtros, calendario de seis días y tablas de reservas/solicitudes. |
-| Revisión visual y consola del navegador | **Pendiente**: el acceso al navegador no estaba disponible y Computer Use detuvo la alternativa nativa al no poder determinar con confianza la URL de Chrome. |
-
-Las comprobaciones JavaScript fueron de código y funciones, no una sesión de interacción real. No certifican dimensiones, distribución visual, foco o ausencia de errores que solo se manifiesten en un navegador. La lista de revisión manual está en el README.
+| Interfaz HTML | Los nueve apartados responden desde Flask. Las pruebas revisan el HTML y envían formularios con el cliente de Flask. |
+| Formularios | Alta y edición de aulas, conflicto de reserva, cancelación, atención de solicitud y persistencia tras recargar. |
 
 ## Repetir las comprobaciones
 

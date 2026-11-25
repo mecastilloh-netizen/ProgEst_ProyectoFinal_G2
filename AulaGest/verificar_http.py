@@ -42,7 +42,14 @@ def iniciar(carpeta, puerto, registro):
 
 
 def detener(proceso):
-    proceso.terminate()
+    if proceso.poll() is not None:
+        return
+    if os.name == "nt":
+        # En Windows el lanzador del entorno virtual puede iniciar otro proceso Python.
+        subprocess.run(["taskkill", "/PID", str(proceso.pid), "/T", "/F"],
+                       stdout=subprocess.DEVNULL, check=True)
+    else:
+        proceso.terminate()
     try:
         proceso.wait(timeout=5)
     except subprocess.TimeoutExpired:
