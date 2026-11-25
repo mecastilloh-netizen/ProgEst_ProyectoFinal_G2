@@ -8,9 +8,10 @@
     "fin": "18:00",
     "motivo": "Examen de recuperación",
     "asistentes": 20,
-    "estado": "pendiente",
+    "estado": "aprobada",
     "prioridad": 2,
-    "orden": 1
+    "orden": 1,
+    "resultado": "Reserva creada: RS-S-DEMO-0"
   },
   {
     "id": "S-DEMO-1",
@@ -21,9 +22,10 @@
     "fin": "18:00",
     "motivo": "Clase de refuerzo",
     "asistentes": 20,
-    "estado": "pendiente",
+    "estado": "aprobada",
     "prioridad": 3,
-    "orden": 2
+    "orden": 2,
+    "resultado": "Reserva creada: RS-S-DEMO-1"
   },
   {
     "id": "S-DEMO-2",
@@ -34,8 +36,9 @@
     "fin": "18:00",
     "motivo": "Club de tecnología",
     "asistentes": 20,
-    "estado": "pendiente",
+    "estado": "aprobada",
     "prioridad": 4,
-    "orden": 3
+    "orden": 3,
+    "resultado": "Reserva creada: RS-S-DEMO-2"
   }
 ]

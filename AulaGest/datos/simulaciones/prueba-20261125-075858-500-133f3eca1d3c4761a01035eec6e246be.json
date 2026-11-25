@@ -1,0 +1,4009 @@
+{
+  "fecha": "2026-11-25",
+  "cantidad": 500,
+  "aprobadas": 72,
+  "rechazadas": 428,
+  "duracion_ms": 55.66,
+  "resultados": [
+    {
+      "persona": 1,
+      "aula": "A101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 2,
+      "aula": "A201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 3,
+      "aula": "B203",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 4,
+      "aula": "B201",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 5,
+      "aula": "A101",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 6,
+      "aula": "A201",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 7,
+      "aula": "B103",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 8,
+      "aula": "A201",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 9,
+      "aula": "A101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 10,
+      "aula": "A203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 11,
+      "aula": "A201",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 12,
+      "aula": "A102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 13,
+      "aula": "A203",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 14,
+      "aula": "A101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 15,
+      "aula": "B103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 16,
+      "aula": "A102",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 17,
+      "aula": "B202",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 18,
+      "aula": "B201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 19,
+      "aula": "A101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 20,
+      "aula": "A202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 21,
+      "aula": "A102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 22,
+      "aula": "B102",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 23,
+      "aula": "A103",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 24,
+      "aula": "A201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 25,
+      "aula": "B203",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 26,
+      "aula": "B201",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 27,
+      "aula": "B103",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 28,
+      "aula": "A103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 29,
+      "aula": "A202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 30,
+      "aula": "B202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 31,
+      "aula": "A201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 32,
+      "aula": "B101",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 33,
+      "aula": "A201",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 34,
+      "aula": "A201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 35,
+      "aula": "B101",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 36,
+      "aula": "A103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 37,
+      "aula": "A201",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 38,
+      "aula": "B203",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 39,
+      "aula": "B201",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 40,
+      "aula": "A201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 41,
+      "aula": "A102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 42,
+      "aula": "A103",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 43,
+      "aula": "B202",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 44,
+      "aula": "B101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 45,
+      "aula": "B103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 46,
+      "aula": "B202",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 47,
+      "aula": "B202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 48,
+      "aula": "B202",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 49,
+      "aula": "A202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 50,
+      "aula": "B102",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 51,
+      "aula": "B103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 52,
+      "aula": "B202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 53,
+      "aula": "A103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 54,
+      "aula": "B103",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 55,
+      "aula": "B201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 56,
+      "aula": "A101",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 57,
+      "aula": "A202",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 58,
+      "aula": "A201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 59,
+      "aula": "A102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 60,
+      "aula": "A102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 61,
+      "aula": "A103",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 62,
+      "aula": "B103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 63,
+      "aula": "B103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 64,
+      "aula": "A201",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 65,
+      "aula": "B203",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 66,
+      "aula": "B202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 67,
+      "aula": "B102",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 68,
+      "aula": "A102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 69,
+      "aula": "A102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 70,
+      "aula": "B201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 71,
+      "aula": "B201",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 72,
+      "aula": "A102",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 73,
+      "aula": "A201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 74,
+      "aula": "A203",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 75,
+      "aula": "A202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 76,
+      "aula": "A201",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 77,
+      "aula": "B203",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 78,
+      "aula": "A201",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 79,
+      "aula": "A201",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 80,
+      "aula": "B202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 81,
+      "aula": "B101",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 82,
+      "aula": "B203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 83,
+      "aula": "A101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 84,
+      "aula": "A102",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 85,
+      "aula": "A201",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 86,
+      "aula": "A103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 87,
+      "aula": "A202",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 88,
+      "aula": "A102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 89,
+      "aula": "A101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 90,
+      "aula": "A102",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 91,
+      "aula": "B101",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 92,
+      "aula": "A201",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 93,
+      "aula": "A103",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 94,
+      "aula": "B101",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 95,
+      "aula": "A202",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 96,
+      "aula": "A103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 97,
+      "aula": "A201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 98,
+      "aula": "B203",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 99,
+      "aula": "A101",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 100,
+      "aula": "B103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 101,
+      "aula": "A101",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 102,
+      "aula": "A103",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 103,
+      "aula": "B202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 104,
+      "aula": "A102",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 105,
+      "aula": "B201",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 106,
+      "aula": "B201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 107,
+      "aula": "B202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 108,
+      "aula": "A202",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 109,
+      "aula": "A201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 110,
+      "aula": "A103",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 111,
+      "aula": "B102",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 112,
+      "aula": "A101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 113,
+      "aula": "A102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 114,
+      "aula": "B103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 115,
+      "aula": "A203",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 116,
+      "aula": "A203",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 117,
+      "aula": "B102",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 118,
+      "aula": "B201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 119,
+      "aula": "B202",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 120,
+      "aula": "B202",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 121,
+      "aula": "A202",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 122,
+      "aula": "B203",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 123,
+      "aula": "A202",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 124,
+      "aula": "B203",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 125,
+      "aula": "B202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 126,
+      "aula": "B103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 127,
+      "aula": "A101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 128,
+      "aula": "A202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 129,
+      "aula": "A203",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 130,
+      "aula": "A103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 131,
+      "aula": "B103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 132,
+      "aula": "B103",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 133,
+      "aula": "A102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 134,
+      "aula": "B103",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 135,
+      "aula": "B201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 136,
+      "aula": "B101",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 137,
+      "aula": "A202",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 138,
+      "aula": "A203",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 139,
+      "aula": "B202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 140,
+      "aula": "B103",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 141,
+      "aula": "A201",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 142,
+      "aula": "B101",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 143,
+      "aula": "B203",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 144,
+      "aula": "B202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 145,
+      "aula": "A202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 146,
+      "aula": "B101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 147,
+      "aula": "A201",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 148,
+      "aula": "A203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 149,
+      "aula": "A201",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 150,
+      "aula": "B101",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 151,
+      "aula": "A102",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 152,
+      "aula": "B202",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 153,
+      "aula": "B202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 154,
+      "aula": "A101",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 155,
+      "aula": "A103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 156,
+      "aula": "A101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 157,
+      "aula": "A203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 158,
+      "aula": "B101",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 159,
+      "aula": "B101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 160,
+      "aula": "A202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 161,
+      "aula": "A101",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 162,
+      "aula": "A203",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 163,
+      "aula": "B202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 164,
+      "aula": "B202",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 165,
+      "aula": "B103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 166,
+      "aula": "A203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 167,
+      "aula": "B103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 168,
+      "aula": "B101",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 169,
+      "aula": "B202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 170,
+      "aula": "B201",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 171,
+      "aula": "B101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 172,
+      "aula": "A202",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 173,
+      "aula": "B101",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 174,
+      "aula": "B102",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 175,
+      "aula": "B202",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 176,
+      "aula": "B203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 177,
+      "aula": "A202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 178,
+      "aula": "A102",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 179,
+      "aula": "A201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 180,
+      "aula": "A101",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 181,
+      "aula": "B102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 182,
+      "aula": "B102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 183,
+      "aula": "B203",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 184,
+      "aula": "B102",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 185,
+      "aula": "A103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 186,
+      "aula": "A102",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 187,
+      "aula": "A103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 188,
+      "aula": "A101",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 189,
+      "aula": "A102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 190,
+      "aula": "B102",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 191,
+      "aula": "B102",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 192,
+      "aula": "B103",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 193,
+      "aula": "B203",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 194,
+      "aula": "A202",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 195,
+      "aula": "B103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 196,
+      "aula": "A202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 197,
+      "aula": "B203",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 198,
+      "aula": "A202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 199,
+      "aula": "B103",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 200,
+      "aula": "A103",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 201,
+      "aula": "B203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 202,
+      "aula": "A102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 203,
+      "aula": "A203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 204,
+      "aula": "B101",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 205,
+      "aula": "B101",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 206,
+      "aula": "B201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 207,
+      "aula": "A101",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 208,
+      "aula": "B101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 209,
+      "aula": "B102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 210,
+      "aula": "B101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 211,
+      "aula": "B101",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 212,
+      "aula": "B203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 213,
+      "aula": "A103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 214,
+      "aula": "B101",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 215,
+      "aula": "A102",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 216,
+      "aula": "A103",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 217,
+      "aula": "A101",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 218,
+      "aula": "A203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 219,
+      "aula": "A203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 220,
+      "aula": "A202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 221,
+      "aula": "A102",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 222,
+      "aula": "B203",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 223,
+      "aula": "A203",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 224,
+      "aula": "B202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 225,
+      "aula": "A201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 226,
+      "aula": "B201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 227,
+      "aula": "A103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 228,
+      "aula": "B201",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 229,
+      "aula": "B203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 230,
+      "aula": "A103",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 231,
+      "aula": "A103",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 232,
+      "aula": "B201",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 233,
+      "aula": "B201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 234,
+      "aula": "B101",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 235,
+      "aula": "A102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 236,
+      "aula": "A102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 237,
+      "aula": "B202",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 238,
+      "aula": "B201",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 239,
+      "aula": "B103",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 240,
+      "aula": "A102",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 241,
+      "aula": "A101",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 242,
+      "aula": "A102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 243,
+      "aula": "B202",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 244,
+      "aula": "B101",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 245,
+      "aula": "B201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 246,
+      "aula": "B102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 247,
+      "aula": "A203",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 248,
+      "aula": "A202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 249,
+      "aula": "B102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 250,
+      "aula": "A203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 251,
+      "aula": "A203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 252,
+      "aula": "A201",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 253,
+      "aula": "A203",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 254,
+      "aula": "B103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 255,
+      "aula": "A102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 256,
+      "aula": "B102",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 257,
+      "aula": "B203",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 258,
+      "aula": "B102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 259,
+      "aula": "A202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 260,
+      "aula": "B203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 261,
+      "aula": "B202",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 262,
+      "aula": "B102",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 263,
+      "aula": "B101",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 264,
+      "aula": "A203",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 265,
+      "aula": "A202",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 266,
+      "aula": "A201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 267,
+      "aula": "A203",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 268,
+      "aula": "A201",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 269,
+      "aula": "A202",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 270,
+      "aula": "A102",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 271,
+      "aula": "A201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 272,
+      "aula": "A202",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 273,
+      "aula": "A202",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 274,
+      "aula": "B103",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 275,
+      "aula": "B202",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 276,
+      "aula": "A101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 277,
+      "aula": "B102",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 278,
+      "aula": "A203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 279,
+      "aula": "A202",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 280,
+      "aula": "A102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 281,
+      "aula": "A102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 282,
+      "aula": "A103",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 283,
+      "aula": "A102",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 284,
+      "aula": "B103",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 285,
+      "aula": "B103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 286,
+      "aula": "B102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 287,
+      "aula": "A202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 288,
+      "aula": "B201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 289,
+      "aula": "A201",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 290,
+      "aula": "A202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 291,
+      "aula": "A103",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 292,
+      "aula": "B103",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 293,
+      "aula": "A101",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 294,
+      "aula": "B203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 295,
+      "aula": "A202",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 296,
+      "aula": "A202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 297,
+      "aula": "B203",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 298,
+      "aula": "B202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 299,
+      "aula": "B202",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 300,
+      "aula": "B101",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 301,
+      "aula": "B202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 302,
+      "aula": "A103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 303,
+      "aula": "A103",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 304,
+      "aula": "B102",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 305,
+      "aula": "B203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 306,
+      "aula": "A202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 307,
+      "aula": "B102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 308,
+      "aula": "B101",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 309,
+      "aula": "B201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 310,
+      "aula": "A102",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 311,
+      "aula": "B202",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 312,
+      "aula": "A103",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 313,
+      "aula": "A202",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 314,
+      "aula": "B202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 315,
+      "aula": "B102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 316,
+      "aula": "A203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 317,
+      "aula": "A103",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 318,
+      "aula": "B203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 319,
+      "aula": "B202",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 320,
+      "aula": "B102",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Aprobada",
+      "motivo": "Aula disponible"
+    },
+    {
+      "persona": 321,
+      "aula": "A202",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 322,
+      "aula": "B101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 323,
+      "aula": "B202",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 324,
+      "aula": "B101",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 325,
+      "aula": "B103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 326,
+      "aula": "B202",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 327,
+      "aula": "A201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 328,
+      "aula": "A202",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 329,
+      "aula": "A102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 330,
+      "aula": "B203",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 331,
+      "aula": "B103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 332,
+      "aula": "A102",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 333,
+      "aula": "B102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 334,
+      "aula": "B102",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 335,
+      "aula": "B103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 336,
+      "aula": "B101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 337,
+      "aula": "A201",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 338,
+      "aula": "B101",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 339,
+      "aula": "A102",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 340,
+      "aula": "A203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 341,
+      "aula": "A101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 342,
+      "aula": "B201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 343,
+      "aula": "A103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 344,
+      "aula": "A203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 345,
+      "aula": "B102",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 346,
+      "aula": "B203",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 347,
+      "aula": "A201",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 348,
+      "aula": "A203",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 349,
+      "aula": "B203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 350,
+      "aula": "B202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 351,
+      "aula": "B102",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 352,
+      "aula": "B103",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 353,
+      "aula": "A102",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 354,
+      "aula": "B103",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 355,
+      "aula": "B203",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 356,
+      "aula": "B202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 357,
+      "aula": "B102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 358,
+      "aula": "B201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 359,
+      "aula": "B202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 360,
+      "aula": "B202",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 361,
+      "aula": "A203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 362,
+      "aula": "B103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 363,
+      "aula": "A201",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 364,
+      "aula": "A201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 365,
+      "aula": "B101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 366,
+      "aula": "B102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 367,
+      "aula": "A101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 368,
+      "aula": "A101",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 369,
+      "aula": "A203",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 370,
+      "aula": "A201",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 371,
+      "aula": "B201",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 372,
+      "aula": "A103",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 373,
+      "aula": "B201",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 374,
+      "aula": "B102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 375,
+      "aula": "A201",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 376,
+      "aula": "B102",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 377,
+      "aula": "B102",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 378,
+      "aula": "A102",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 379,
+      "aula": "B201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 380,
+      "aula": "B203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 381,
+      "aula": "A202",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 382,
+      "aula": "B102",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 383,
+      "aula": "B101",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 384,
+      "aula": "B201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 385,
+      "aula": "A101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 386,
+      "aula": "A202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 387,
+      "aula": "B201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 388,
+      "aula": "A202",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 389,
+      "aula": "A201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 390,
+      "aula": "B201",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 391,
+      "aula": "B202",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 392,
+      "aula": "A202",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 393,
+      "aula": "B201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 394,
+      "aula": "A102",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 395,
+      "aula": "B203",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 396,
+      "aula": "A201",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 397,
+      "aula": "B103",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 398,
+      "aula": "A103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 399,
+      "aula": "A202",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 400,
+      "aula": "A102",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 401,
+      "aula": "A103",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 402,
+      "aula": "B103",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 403,
+      "aula": "B101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 404,
+      "aula": "B103",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 405,
+      "aula": "A203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 406,
+      "aula": "B201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 407,
+      "aula": "A102",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 408,
+      "aula": "B102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 409,
+      "aula": "B201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 410,
+      "aula": "B202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 411,
+      "aula": "B202",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 412,
+      "aula": "A103",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 413,
+      "aula": "A202",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 414,
+      "aula": "A102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 415,
+      "aula": "B101",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 416,
+      "aula": "B202",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 417,
+      "aula": "B201",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 418,
+      "aula": "B101",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 419,
+      "aula": "B102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 420,
+      "aula": "A202",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 421,
+      "aula": "A201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 422,
+      "aula": "A201",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 423,
+      "aula": "B202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 424,
+      "aula": "A101",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 425,
+      "aula": "A201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 426,
+      "aula": "A102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 427,
+      "aula": "B202",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 428,
+      "aula": "A101",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 429,
+      "aula": "A103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 430,
+      "aula": "A102",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 431,
+      "aula": "B201",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 432,
+      "aula": "A203",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 433,
+      "aula": "A202",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 434,
+      "aula": "B103",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 435,
+      "aula": "A102",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 436,
+      "aula": "A103",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 437,
+      "aula": "A201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 438,
+      "aula": "A101",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 439,
+      "aula": "A101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 440,
+      "aula": "B103",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 441,
+      "aula": "B102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 442,
+      "aula": "B103",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 443,
+      "aula": "B102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 444,
+      "aula": "B201",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 445,
+      "aula": "B102",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 446,
+      "aula": "A101",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con horario 07:00–09:00."
+    },
+    {
+      "persona": 447,
+      "aula": "B101",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 448,
+      "aula": "B102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 449,
+      "aula": "A102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 450,
+      "aula": "B201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 451,
+      "aula": "A103",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 452,
+      "aula": "B101",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 453,
+      "aula": "B102",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 454,
+      "aula": "A102",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 455,
+      "aula": "B202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 456,
+      "aula": "B101",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 457,
+      "aula": "B101",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 458,
+      "aula": "B101",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 459,
+      "aula": "A203",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 460,
+      "aula": "B202",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 461,
+      "aula": "A103",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 462,
+      "aula": "A102",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 463,
+      "aula": "A102",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 464,
+      "aula": "B203",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 465,
+      "aula": "A103",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 466,
+      "aula": "B201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 467,
+      "aula": "B202",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 468,
+      "aula": "A203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 469,
+      "aula": "B203",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 470,
+      "aula": "B201",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 471,
+      "aula": "A102",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 472,
+      "aula": "A103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 473,
+      "aula": "A201",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 474,
+      "aula": "B103",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 475,
+      "aula": "A202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 476,
+      "aula": "B101",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 477,
+      "aula": "B201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 478,
+      "aula": "A101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 479,
+      "aula": "B203",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B203 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 480,
+      "aula": "A203",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 481,
+      "aula": "A103",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con reserva 10:00–11:00."
+    },
+    {
+      "persona": 482,
+      "aula": "A102",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 483,
+      "aula": "A102",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A102 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 484,
+      "aula": "B101",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 485,
+      "aula": "A203",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A203 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 486,
+      "aula": "A202",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 487,
+      "aula": "B201",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 488,
+      "aula": "A101",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 489,
+      "aula": "B201",
+      "inicio": "10:00",
+      "fin": "11:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con horario 09:00–11:00."
+    },
+    {
+      "persona": 490,
+      "aula": "A202",
+      "inicio": "09:00",
+      "fin": "10:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A202 no está disponible: coincide con reserva 09:00–10:00."
+    },
+    {
+      "persona": 491,
+      "aula": "B102",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B102 no está disponible: coincide con horario 13:00–15:00."
+    },
+    {
+      "persona": 492,
+      "aula": "B101",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 493,
+      "aula": "B103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 11:00–12:00."
+    },
+    {
+      "persona": 494,
+      "aula": "B101",
+      "inicio": "13:00",
+      "fin": "14:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B101 no está disponible: coincide con reserva 13:00–14:00."
+    },
+    {
+      "persona": 495,
+      "aula": "B202",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B202 no está disponible: coincide con horario 11:00–13:00."
+    },
+    {
+      "persona": 496,
+      "aula": "B103",
+      "inicio": "15:00",
+      "fin": "16:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B103 no está disponible: coincide con reserva 15:00–16:00."
+    },
+    {
+      "persona": 497,
+      "aula": "A101",
+      "inicio": "12:00",
+      "fin": "13:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A101 no está disponible: coincide con reserva 12:00–13:00."
+    },
+    {
+      "persona": 498,
+      "aula": "B201",
+      "inicio": "14:00",
+      "fin": "15:00",
+      "estado": "Rechazada",
+      "motivo": "El aula B201 no está disponible: coincide con reserva 14:00–15:00."
+    },
+    {
+      "persona": 499,
+      "aula": "A201",
+      "inicio": "08:00",
+      "fin": "09:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A201 no está disponible: coincide con reserva 08:00–09:00."
+    },
+    {
+      "persona": 500,
+      "aula": "A103",
+      "inicio": "11:00",
+      "fin": "12:00",
+      "estado": "Rechazada",
+      "motivo": "El aula A103 no está disponible: coincide con horario 11:00–13:00."
+    }
+  ]
+}

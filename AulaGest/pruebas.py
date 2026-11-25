@@ -349,6 +349,55 @@ def test_escritura_atomica_preserva_original():
         comprobar.assertEqual(archivos.cargar_datos(ruta), [1, 2])
 
 
+def test_simular_registros_y_eliminar_un_informe():
+    with entorno() as (cliente, carpeta, app):
+        originales = {ruta: ruta.read_bytes() for ruta in carpeta.glob("*.json")}
+        resumen_inicial = cliente.get("/api/reservas").json
+        comprobar.assertIn('href="/pruebas"', cliente.get("/").get_data(as_text=True))
+        comprobar.assertIn("500 personas", cliente.get("/pruebas").get_data(as_text=True))
+        with cliente.session_transaction() as sesion:
+            token = sesion["token"]
+        form = {"fecha": "2030-01-06", "token": token}
+        directorio = carpeta / "simulaciones"
+        for valor in ("0", "2.5", "-1", "abc", ""):
+            comprobar.assertEqual(cliente.post("/pruebas", data={**form, "cantidad": valor}).status_code, 400)
+        comprobar.assertFalse(directorio.exists())
+
+        informes = []
+        for cantidad in (10001, 10, 100, 500, 37):
+            campo = "ejemplo" if cantidad in (10, 100, 500) else "cantidad"
+            respuesta = cliente.post("/pruebas", data={**form, campo: str(cantidad)})
+            comprobar.assertEqual(respuesta.status_code, 303)
+            url = respuesta.location
+            ruta = directorio / (url.split("/")[-1] + ".json")
+            informe = json.loads(ruta.read_bytes())
+            informes.append((url, ruta))
+            comprobar.assertEqual(len(informe["resultados"]), cantidad)
+            aprobadas = sum(f["estado"] == "Aprobada" for f in informe["resultados"])
+            comprobar.assertEqual(informe["aprobadas"], aprobadas)
+            comprobar.assertEqual(informe["rechazadas"], cantidad - aprobadas)
+            comprobar.assertEqual(cliente.get(url).status_code, 200)
+            if cantidad == 500:
+                comprobar.assertGreater(aprobadas, 0)
+                comprobar.assertGreater(informe["rechazadas"], 0)
+                comprobar.assertIn("Página 20 de 20", cliente.get(url + "?pagina=20").get_data(as_text=True))
+
+        url, ruta = informes[0]
+        comprobar.assertEqual(crear_app(carpeta).test_client().get(url).status_code, 200)
+        comprobar.assertIn(url, cliente.get("/pruebas").get_data(as_text=True))
+        borrar = url + "/eliminar"
+        comprobar.assertNotEqual(cliente.get(borrar).status_code, 200)
+        comprobar.assertEqual(cliente.post(borrar).status_code, 403)
+        comprobar.assertTrue(ruta.is_file())
+        comprobar.assertEqual(cliente.post("/pruebas/reservas/eliminar", data=form).status_code, 404)
+        comprobar.assertEqual(cliente.post(borrar, data=form).status_code, 303)
+        comprobar.assertEqual(cliente.get(url).status_code, 404)
+        comprobar.assertNotIn(url, cliente.get("/pruebas").get_data(as_text=True))
+        comprobar.assertEqual(set(directorio.iterdir()), {archivo for _, archivo in informes[1:]})
+        comprobar.assertEqual(cliente.get("/api/reservas").json, resumen_inicial)
+        comprobar.assertEqual({r: r.read_bytes() for r in carpeta.glob("*.json")}, originales)
+
+
 def load_tests(loader, tests, pattern):
     return unittest.TestSuite(unittest.FunctionTestCase(funcion, description=nombre)
                               for nombre, funcion in sorted(globals().items()) if nombre.startswith("test_"))

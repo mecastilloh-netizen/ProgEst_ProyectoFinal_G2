@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "a0cb19554ca94303a5a4106f2bbceb1f",
+    "accion": "Catálogo actualizado",
+    "detalle": "docentes: test",
+    "fecha": "2026-11-25T06:29:20.047534-06:00"
+  },
+  {
+    "id": "5efb1b1382104f71a540785d3ed2f1dd",
+    "accion": "Registro eliminado",
+    "detalle": "docentes: D07",
+    "fecha": "2026-11-25T06:31:13.179296-06:00"
+  },
+  {
+    "id": "3165e0ce1d7345319ea666bce76c2a82",
+    "accion": "Solicitud aprobada",
+    "detalle": "Examen de recuperación",
+    "fecha": "2026-11-25T06:31:59.755877-06:00"
+  },
+  {
+    "id": "ac40298e871b48aaad8aa9cbc38cfec8",
+    "accion": "Solicitud aprobada",
+    "detalle": "Clase de refuerzo",
+    "fecha": "2026-11-25T06:32:02.908748-06:00"
+  },
+  {
+    "id": "a6c075c658864d359427d0e0d48008cc",
+    "accion": "Solicitud aprobada",
+    "detalle": "Club de tecnología",
+    "fecha": "2026-11-25T06:32:03.909921-06:00"
+  }
+]

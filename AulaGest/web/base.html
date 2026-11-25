@@ -17,6 +17,9 @@
        href="{{ url_for('web.inicio') if clave == 'resumen' else url_for('web.listado', tipo=clave) }}"
        {% if activo %}aria-current="page"{% endif %}>{{ clave|capitalize }}</a>
   {% endfor %}
+  {% set activo = request.endpoint in ('web.pruebas_registros', 'web.informe_prueba') %}
+  <a class="nav-link rounded-2 px-3 py-2 {{ 'active fw-semibold' if activo else 'text-body-secondary' }}"
+     href="{{ url_for('web.pruebas_registros') }}" {% if activo %}aria-current="page"{% endif %}>Pruebas de registros</a>
 {% endmacro %}
 <header class="bg-white border-bottom">
   <div class="container-xxl py-3 d-flex align-items-center justify-content-between gap-3">

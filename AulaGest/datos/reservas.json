@@ -31,5 +31,41 @@
     "motivo": "Taller de proyectos",
     "asistentes": 20,
     "estado": "activa"
+  },
+  {
+    "aula": "B101",
+    "docente": "D01",
+    "inicio": "17:00",
+    "fin": "18:00",
+    "asistentes": 20,
+    "fecha": "2026-11-06",
+    "motivo": "Examen de recuperación",
+    "id": "RS-S-DEMO-0",
+    "estado": "activa",
+    "solicitud": "S-DEMO-0"
+  },
+  {
+    "aula": "B102",
+    "docente": "D02",
+    "inicio": "17:00",
+    "fin": "18:00",
+    "asistentes": 20,
+    "fecha": "2026-11-07",
+    "motivo": "Clase de refuerzo",
+    "id": "RS-S-DEMO-1",
+    "estado": "activa",
+    "solicitud": "S-DEMO-1"
+  },
+  {
+    "aula": "B103",
+    "docente": "D03",
+    "inicio": "17:00",
+    "fin": "18:00",
+    "asistentes": 20,
+    "fecha": "2026-11-08",
+    "motivo": "Club de tecnología",
+    "id": "RS-S-DEMO-2",
+    "estado": "activa",
+    "solicitud": "S-DEMO-2"
   }
 ]

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block cabecera %}
+<a href="{{ url_for('web.pruebas_registros') }}" class="btn btn-outline-secondary">Volver a pruebas</a>
+{% endblock %}
+{% block contenido %}
+<p class="text-secondary">Reservas simuladas para el {{ informe.fecha[8:10] }}/{{ informe.fecha[5:7] }}/{{ informe.fecha[:4] }}.</p>
+<dl class="row g-3 mb-4">
+  {% for etiqueta, valor, color in [('Personas', informe.cantidad, 'primary'), ('Aprobadas', informe.aprobadas, 'success'), ('Rechazadas', informe.rechazadas, 'danger'), ('Tiempo de simulación', informe.duracion_ms ~ ' ms', 'secondary')] %}
+    <div class="col-6 col-xl-3"><div class="card h-100 p-3 border-{{ color }}-subtle">
+      <dt class="small text-secondary">{{ etiqueta }}</dt>
+      <dd class="h4 mb-0 mt-1 text-{{ color }}">{{ valor }}</dd>
+    </div></div>
+  {% endfor %}
+</dl>
+<section class="card shadow-sm">
+  <div class="card-header bg-white p-3"><h2 class="h5 mb-0">Intentos por persona</h2></div>
+  <div class="table-responsive">
+    <table class="table table-striped align-middle mb-0">
+      <thead><tr><th>Persona</th><th>Aula</th><th>Horario</th><th>Resultado</th><th>Motivo</th></tr></thead>
+      <tbody>{% for fila in filas %}
+        <tr><th scope="row">{{ fila.persona }}</th><td>{{ fila.aula }}</td>
+          <td class="text-nowrap">{{ fila.inicio }}–{{ fila.fin }}</td>
+          <td><span class="badge {{ 'text-bg-success' if fila.estado == 'Aprobada' else 'text-bg-danger' }}">{{ fila.estado }}</span></td><td>{{ fila.motivo }}</td></tr>
+      {% endfor %}</tbody>
+    </table>
+  </div>
+  {% if paginas > 1 %}
+  <nav aria-label="Páginas del informe" class="card-footer bg-white d-flex align-items-center gap-3">
+    {% if pagina > 1 %}<a href="{{ url_for('web.informe_prueba', identificador=identificador, pagina=pagina-1) }}">Anterior</a>{% endif %}
+    <span>Página {{ pagina }} de {{ paginas }}</span>
+    {% if pagina < paginas %}<a href="{{ url_for('web.informe_prueba', identificador=identificador, pagina=pagina+1) }}">Siguiente</a>{% endif %}
+  </nav>
+  {% endif %}
+</section>
+{% endblock %}

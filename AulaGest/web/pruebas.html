@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import token with context %}
+{% block contenido %}
+<section class="card shadow-sm mb-4">
+  <div class="card-body p-4">
+    <h2 class="h5">Simular reservas de aula</h2>
+    <p class="text-secondary">Cada persona intenta reservar un aula durante una hora entre las 08:00 y las 16:00. Los intentos se procesan en orden sobre una copia de las reservas del campus. Puedes comparar distintas cantidades usando la misma fecha.</p>
+    {% if error %}<p class="alert alert-danger" role="alert">{{ error }}</p>{% endif %}
+    <form method="post" class="row g-3">
+      {{ token() }}
+      <div class="col-sm-5">
+        <label for="fecha" class="form-label">Fecha de las reservas</label>
+        <input class="form-control" id="fecha" name="fecha" type="date" value="{{ fecha }}" required>
+      </div>
+      <div class="col-sm-5">
+        <label for="cantidad" class="form-label">Número de personas</label>
+        <input class="form-control" id="cantidad" name="cantidad" type="number" min="1" step="1" value="{{ cantidad }}" required>
+      </div>
+      <div class="col-12"><button class="btn btn-primary" type="submit">Ejecutar prueba</button></div>
+      <div class="col-12 d-flex align-items-center flex-wrap gap-2">
+        <span class="small text-secondary">Prueba rápida</span>
+        {% for n in (10, 100, 500) %}
+          <button class="btn btn-outline-primary btn-sm" name="ejemplo" value="{{ n }}" formnovalidate>{{ n }} personas</button>
+        {% endfor %}
+      </div>
+    </form>
+  </div>
+</section>
+<section class="card shadow-sm">
+  <div class="card-header bg-white p-3"><h2 class="h5 mb-0">Informes guardados</h2></div>
+  {% if informes %}
+  <div class="table-responsive">
+    <table class="table table-hover align-middle mb-0">
+      <thead><tr><th>Fecha de ejecución</th><th>Personas</th><th>Informe</th><th>Archivo JSON</th></tr></thead>
+      <tbody>{% for item in informes %}
+        <tr><td>{{ item.creado.strftime('%d/%m/%Y · %H:%M:%S') }}</td><td>{{ item.cantidad }}</td>
+          <td><a href="{{ url_for('web.informe_prueba', identificador=item.id) }}">Ver resultados</a></td>
+          <td><details><summary class="text-danger">Eliminar archivo</summary>
+            <form method="post" action="{{ url_for('web.eliminar_prueba', identificador=item.id) }}" class="mt-2">
+              {{ token() }}<button class="btn btn-sm btn-danger">Confirmar eliminación</button>
+            </form></details></td></tr>
+      {% endfor %}</tbody>
+    </table>
+  </div>
+  {% else %}<p class="m-3 text-secondary">Aquí aparecerá el informe JSON de cada prueba que ejecutes.</p>{% endif %}
+</section>
+{% endblock %}

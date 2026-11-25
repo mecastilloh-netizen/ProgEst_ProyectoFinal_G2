@@ -1,9 +1,11 @@
 """Pantallas HTML de AulaGest. Las reglas y el guardado se delegan a servicios."""
 from flask import Blueprint, abort, current_app, flash, redirect, render_template, request, url_for
+import archivos
 import horarios
 import listas
 import monticulos
 import servicios
+import simulaciones
 
 web = Blueprint("web", __name__)
 
@@ -56,6 +58,48 @@ def inicio():
 @web.get("/web/index.html")
 def antiguo_inicio():
     return redirect(url_for("web.inicio"))
+
+
+@web.route("/pruebas", methods=["GET", "POST"])
+def pruebas_registros():
+    fecha = request.form.get("fecha", horarios.ahora_nicaragua().date().isoformat())
+    cantidad = request.form.get("ejemplo", request.form.get("cantidad", "10"))
+    error = None
+    if request.method == "POST":
+        try:
+            identificador = simulaciones.ejecutar(sistema(), cantidad, fecha)
+        except ValueError as exc:
+            error = str(exc)
+        except OSError:
+            abort(503, "No se pudo guardar el informe de prueba. Revisa el espacio y los permisos de la carpeta.")
+        else:
+            return redirect(url_for("web.informe_prueba", identificador=identificador), code=303)
+    return render_template("pruebas.html", titulo="Pruebas de registros", fecha=fecha, cantidad=cantidad,
+                           informes=simulaciones.listar_informes(sistema()), error=error), 400 if error else 200
+
+
+@web.get("/pruebas/<identificador>")
+def informe_prueba(identificador):
+    informe = archivos.cargar_datos(simulaciones.ruta_informe(sistema(), identificador))
+    por_pagina = 25
+    paginas = (informe["cantidad"] + por_pagina - 1) // por_pagina
+    pagina = request.args.get("pagina", 1, type=int)
+    if not 1 <= pagina <= paginas:
+        abort(404)
+    filas = informe["resultados"][(pagina - 1) * por_pagina:pagina * por_pagina]
+    return render_template("informe_prueba.html", titulo="Resultado de la prueba", informe=informe,
+                           identificador=identificador, filas=filas, pagina=pagina, paginas=paginas)
+
+
+@web.post("/pruebas/<identificador>/eliminar")
+def eliminar_prueba(identificador):
+    ruta = simulaciones.ruta_informe(sistema(), identificador)
+    try:
+        ruta.unlink()
+    except OSError:
+        abort(503, "No se pudo eliminar el informe de prueba. Revisa los permisos de la carpeta.")
+    flash("Se eliminó el archivo de esta prueba.")
+    return redirect(url_for("web.pruebas_registros"), code=303)
 
 
 @web.get("/<tipo>")

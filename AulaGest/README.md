@@ -50,6 +50,9 @@ El entorno virtual es local a la máquina; no debe copiarse como parte de una en
 | Edificios | CRUD de edificios, conexiones de doble sentido, listado de adyacencias y rutas BFS. |
 | Solicitudes | Crear solicitudes, consultar la cola y atender la siguiente según prioridad y llegada. |
 | Historial | Ver y buscar movimientos persistentes, del más reciente al más antiguo. |
+| Pruebas de registros | Simular una reserva por persona, comparar resultados y eliminar informes de prueba. |
+
+En **Pruebas de registros** (`/pruebas`), elige una fecha y ejecuta una prueba rápida de 10, 100 o 500 personas, o introduce cualquier cantidad entera positiva. Los intentos se procesan uno tras otro usando los horarios del campus, las reservas existentes y las aprobaciones de la propia simulación. El informe muestra los resultados individuales y el tiempo de procesamiento en memoria. Cada ejecución crea un JSON en `datos/simulaciones/`. Para borrarlo, abre **Informes guardados → Eliminar archivo → Confirmar eliminación**.
 
 Flask genera cada página en el servidor con las plantillas HTML de `web/`. La presentación usa [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/) con una copia local de su CSS y licencia en `web/assets/bootstrap/`. Los enlaces y filtros hacen peticiones GET. Los formularios envían los cambios por POST y muestran los errores de validación junto a los datos introducidos.
 
